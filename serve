@@ -1,0 +1,5 @@
+<?php
+
+    echo "Press Ctrl-C to stop server \n";
+
+    exec("php -S localhost:8000 -t public");
