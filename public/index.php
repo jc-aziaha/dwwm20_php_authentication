@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -26,12 +29,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/login.php">Connexion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/register.php">Inscription</a>
-                        </li>
+                        <?php if(isset($_SESSION['auth']) && !empty($_SESSION['auth'])) : ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout.php">Déconnexion</a>
+                            </li>
+                        <?php else : ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login.php">Connexion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/register.php">Inscription</a>
+                            </li>
+                        <?php endif ?>
                     </ul>
                 </div>
             </div>
