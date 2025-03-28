@@ -6,7 +6,7 @@ session_start();
 
     $db = connectToDb();
 
-    if (!getUser($db)) 
+    if (getUser($db)) 
     {
         return header("Location: index.php");
     }

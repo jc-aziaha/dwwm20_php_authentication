@@ -36,6 +36,11 @@
      */
     function getUser(PDO $db): array|null
     {
+        if ( !isset($_SESSION['user']) || empty($_SESSION['user']) ) 
+        {
+            return null;
+        }
+
         $request = $db->prepare("SELECT * FROM user WHERE id=:id");
         $request->bindValue(":id", $_SESSION['user']['id']);
         $request->execute();
