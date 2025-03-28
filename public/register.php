@@ -241,7 +241,7 @@ session_start();
                                 <input type="password" name="password" placeholder="Votre mot de passe" class="form-control" value="<?= isset($_SESSION['old']['password']) && !empty(isset($_SESSION['old']['password'])) ? htmlspecialchars($_SESSION['old']['password']) : ''; unset($_SESSION['old']['password']); ?>">
                             </div>
                             <div class="mb-3">
-                                <input type="text" name="confirmPassword" placeholder="Confirmation de votre mot de passe" class="form-control">
+                                <input type="password" name="confirmPassword" placeholder="Confirmation de votre mot de passe" class="form-control">
                             </div>
                             <div>
                                 <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
