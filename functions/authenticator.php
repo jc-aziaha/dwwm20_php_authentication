@@ -36,13 +36,13 @@
      */
     function getUser(PDO $db): array|null
     {
-        if ( !isset($_SESSION['user']) || empty($_SESSION['user']) ) 
+        if ( !isset($_SESSION['auth']) || empty($_SESSION['auth']) ) 
         {
             return null;
         }
 
         $request = $db->prepare("SELECT * FROM user WHERE id=:id");
-        $request->bindValue(":id", $_SESSION['user']['id']);
+        $request->bindValue(":id", $_SESSION['auth']['id']);
         $request->execute();
 
         if ($request->rowCount() != 1) 

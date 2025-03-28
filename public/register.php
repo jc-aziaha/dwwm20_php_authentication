@@ -238,7 +238,7 @@ session_start();
                                 <input type="email" name="email" placeholder="Votre email" class="form-control" value="<?= isset($_SESSION['old']['email']) && !empty(isset($_SESSION['old']['email'])) ? htmlspecialchars($_SESSION['old']['email']) : ''; unset($_SESSION['old']['email']); ?>">
                             </div>
                             <div class="mb-3">
-                                <input type="text" name="password" placeholder="Votre mot de passe" class="form-control" value="<?= isset($_SESSION['old']['password']) && !empty(isset($_SESSION['old']['password'])) ? htmlspecialchars($_SESSION['old']['password']) : ''; unset($_SESSION['old']['password']); ?>">
+                                <input type="password" name="password" placeholder="Votre mot de passe" class="form-control" value="<?= isset($_SESSION['old']['password']) && !empty(isset($_SESSION['old']['password'])) ? htmlspecialchars($_SESSION['old']['password']) : ''; unset($_SESSION['old']['password']); ?>">
                             </div>
                             <div class="mb-3">
                                 <input type="text" name="confirmPassword" placeholder="Confirmation de votre mot de passe" class="form-control">
@@ -261,7 +261,7 @@ session_start();
                     </div>
                     <div class="col-md-6">
                         <!-- Image -->
-                        <img src="/images/register.png" class="img-fluid" alt="">
+                        <img src="/assets/images/register.png" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
